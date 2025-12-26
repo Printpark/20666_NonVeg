@@ -2,55 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Non Veg Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Non Veg Menu – Train 20666</title>
 
   <style>
     body {
-      margin: 0;
-      padding: 0;
       font-family: Arial, sans-serif;
       background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
     }
 
     .header-img {
       width: 100%;
       height: auto;
-      max-height: 220px;
-      object-fit: cover;
+      display: block;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: -40px auto 30px;
+      padding: 0 15px;
     }
 
     .card {
       background: #ffffff;
-      margin: 20px;
-      padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     }
 
-    .title {
+    h2 {
       text-align: center;
       color: #c0392b;
-      font-size: 26px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .nonveg-dot {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background-color: #8b0000;
-      border-radius: 50%;
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
-    .date {
-      text-align: right;
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .info {
@@ -60,55 +45,53 @@
     }
 
     .info strong {
-      font-weight: bold;
+      color: #000;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Train Image -->
-  <img src="train.jpg" alt="Vande Bharat Train" class="header-img">
+  <!-- HEADER IMAGE -->
+  <img src="train.jpg" alt="Train Image" class="header-img" />
 
-  <!-- Card -->
-  <div class="card">
+  <div class="container">
+    <div class="card">
 
-    <div class="title">
-      Non Veg Breakfast <span class="nonveg-dot"></span>
+      <h2>Non Veg Breakfast </h2>
+
+      <div class="info">
+        <strong>Licensee :</strong> M/S P. SIVAPRASAD
+      </div>
+
+      <div class="info">
+        <strong>FSSAI No. :</strong> 12424026001058
+      </div>
+
+      <div class="info">
+        <strong>Train Name &amp; No. :</strong> Vande Bharat Express – 20666
+      </div>
+
+      <div class="info">
+        <strong>Menu :</strong>
+        Omelette (125 gms) / Chicken Curry (100 gms) /
+        Veg Cutlet (100 gms) / 2 Slices of Brown Bread (50 gms)
+      </div>
+
+      <!-- ✅ DATE EXACT SAME POSITION AS VEG -->
+      <div class="info">
+        <strong>Date :</strong> <span id="todayDateNonVeg"></span>
+      </div>
+
+      <!-- ✅ NOTE LAST -->
+      <div class="info">
+        <strong>Note :</strong> <b><i>For Immediate Consumption</i></b>
+      </div>
+
     </div>
-
-    <div class="info">
-      <strong>Train Name & No. :</strong> Vande Bharat Express – 20666
-    </div>
-
-    <div class="info">
-      <strong>Category :</strong> Non Vegetarian
-    </div>
-
-    <div class="info">
-      <strong>Menu :</strong> Omelette (125 gms) / Chicken Curry (100 gms) /  
-      Veg Cutlet (100 gms) / 2 Slices of Brown Bread (50 gms)
-    </div>
-
-    <div class="info">
-      <strong>Licensee :</strong> M/S P. SIVAPRASAD
-    </div>
-
-    <div class="info">
-      <strong>FSSAI No. :</strong> 12424026001058
-    </div>
-
-    <div class="info">
-      <strong>Note :</strong> <b><i>For Immediate Consumption</i></b>
-    </div>
-    
-    <div class="date">
-      Date : <span id="todayDateNonVeg"></span>
-    </div>
-
   </div>
 
-  <!-- Auto Date Script -->
+  <!-- DATE SCRIPT -->
   <script>
     const todayNV = new Date();
     const optionsNV = { day: 'numeric', month: 'long', year: 'numeric' };
